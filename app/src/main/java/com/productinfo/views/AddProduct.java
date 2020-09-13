@@ -1,11 +1,14 @@
 package com.productinfo.views;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -26,6 +29,9 @@ public class AddProduct extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.addproduct);
         final DatabaseHelper databaseHelper = DatabaseHelper.getInstance(getApplicationContext());
+
+        getSupportActionBar().setTitle("Add Product");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Initializing Views
         editTextProductName = findViewById(R.id.editTextProductName);
@@ -79,5 +85,15 @@ public class AddProduct extends AppCompatActivity {
 
             }
         });
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            Intent intent =(new Intent(AddProduct.this, MainActivity.class));
+            startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
