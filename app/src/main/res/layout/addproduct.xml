@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+    <EditText
+        android:id="@+id/editTextProductName"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="Product Name"
+        android:maxLines="1"
+        android:maxLength="30"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@drawable/edittext_background"
+        android:layout_centerHorizontal="true"
+        />
+
+    <EditText
+        android:id="@+id/editTextProductDesc"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:hint="Product Description"
+        android:background="@drawable/edittext_background"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:maxLength="100"
+        android:layout_below="@id/editTextProductName"
+        android:gravity="top"
+        android:layout_centerHorizontal="true"
+        />
+
+    <EditText
+        android:id="@+id/editTextProductQty"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="Product Quantity"
+        android:inputType="number"
+        android:maxLength="4"
+        android:background="@drawable/edittext_background"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:layout_below="@id/editTextProductDesc"
+        android:layout_centerHorizontal="true"
+        />
+
+    <EditText
+        android:id="@+id/editTextProductPrice"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextProductQty"
+        android:hint="Product Price"
+        android:inputType="numberDecimal"
+        android:maxLength="5"
+        android:background="@drawable/edittext_background"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:layout_centerHorizontal="true"
+        />
+</RelativeLayout>
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:background="@android:color/holo_blue_dark"
+        android:textColor="@android:color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+</RelativeLayout>
